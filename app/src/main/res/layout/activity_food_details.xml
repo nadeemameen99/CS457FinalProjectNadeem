@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/the_primary"
+    android:padding="17dp"
+    tools:context=".FoodDetailsActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pageTitle"
+            android:text="Add new Food Item"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+
+            />
+
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/SaveDataBtn"
+            android:src="@drawable/ic_baseline_done_outline_24"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_centerVertical="true"
+
+            />
+
+</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLayout"
+        android:orientation="vertical"
+        android:padding="17dp"
+        android:layout_marginVertical="12dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/white">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameOfFooodText"
+        android:hint="Enter Food Name Here: "
+        android:drawableRight="@drawable/ic_baseline_qr_code_scanner_24"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        android:layout_marginVertical="5dp"
+        android:padding="11dp"
+        android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/FoodCatagory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:hint="Select the Food Catagory"
+            android:padding="11dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spinnerFoodCatagory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ExpDateOfFoodText"
+            android:textColorHint="@color/black"
+            android:hint="Select the Expiration Date: "
+            android:textSize="18sp"
+            android:layout_marginVertical="5dp"
+            android:padding="11dp"
+            android:textColor="@color/black"/>
+
+
+
+<Button
+    android:layout_width="match_parent"
+    android:id="@+id/selectDateBtn"
+    android:layout_height="wrap_content"
+    android:text="JAN 01 2022"
+    android:textSize="18sp"
+    android:textColor="@color/black"
+    style="?android:spinnerStyle"
+    android:layout_marginVertical="5dp"
+    android:padding="11dp"
+    android:onClick="openDatePicker"
+    />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/deleteItemTextViewBtn"
+        android:visibility="gone"
+        android:text="Delete Item"
+        android:textSize="14sp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textColor="#BC0D00"
+        />
+
+</RelativeLayout>
